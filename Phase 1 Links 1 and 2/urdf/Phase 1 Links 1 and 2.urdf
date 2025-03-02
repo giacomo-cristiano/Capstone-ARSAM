@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Phase 1 Links 1 and 2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.3158E-07 -0.0066564 0.035"
+        rpy="0 0 0" />
+      <mass
+        value="1.3468" />
+      <inertia
+        ixx="0.001167"
+        ixy="1.0458E-11"
+        ixz="-1.3577E-14"
+        iyy="0.001545"
+        iyz="-3.1447E-14"
+        izz="0.0023418" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Phase 1 Links 1 and 2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Phase 1 Links 1 and 2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link 1 -  Purple">
+    <inertial>
+      <origin
+        xyz="0.00046301 2.9701E-08 0.073559"
+        rpy="0 0 0" />
+      <mass
+        value="0.3271" />
+      <inertia
+        ixx="0.00012213"
+        ixy="-1.5392E-11"
+        ixz="4.8687E-09"
+        iyy="0.00013427"
+        iyz="-6.6384E-11"
+        izz="0.00011641" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Phase 1 Links 1 and 2/meshes/Link 1 -  Purple.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Phase 1 Links 1 and 2/meshes/Link 1 -  Purple.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link 1 -  Purple" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="Link 2 - Orange ">
+    <inertial>
+      <origin
+        xyz="2.4354E-06 0.10346 7.8406E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.47746" />
+      <inertia
+        ixx="0.00097239"
+        ixy="-6.6053E-09"
+        ixz="2.5405E-12"
+        iyy="9.7797E-05"
+        iyz="-9.1051E-13"
+        izz="0.00099837" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Phase 1 Links 1 and 2/meshes/Link 2 - Orange .STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Phase 1 Links 1 and 2/meshes/Link 2 - Orange .STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="revolute">
+    <origin
+      xyz="0.0013777 0 0.133"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Link 1 -  Purple" />
+    <child
+      link="Link 2 - Orange " />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+</robot>
