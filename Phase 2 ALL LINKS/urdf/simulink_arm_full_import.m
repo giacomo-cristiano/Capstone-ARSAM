@@ -1,1 +1,1 @@
-smimport('C:\Users\User\OneDrive - University of Toronto\Capstone-CODE\Phase 2 ALL LINKS\urdf\Phase 2 ALL LINKS.urdf')
+smimport('C:\Users\User\Desktop\Capstone-Code\Phase 2 ALL LINKS\urdf\Phase 2 ALL LINKS.urdf')

@@ -31,93 +31,94 @@ void loop() {
   Serial.println("Testing Servo 1...");
 
   // Full sweep from 0° up to 270° (adjust if your servo only supports 180°)
-  for(int angle = 0; angle <= 270; angle++) {
+  for(int angle = 0; angle <= 270; angle+=30) {
     servo1.write(angle);
-    delay(20);
+    
+    delay(500);
   }
 
   // Full sweep from 270° down to 0°
-  for(int angle = 270; angle >= 0; angle--) {
+  for(int angle = 270; angle >= 0; angle-=30) {
     servo1.write(angle);
-    delay(20);
+    delay(500);
   }
 
-  // Map analog value (0–1023) from A0 to 0–180 servo angle
-  {
-    int sensorValue = analogRead(A0);
-    int mappedAngle = map(sensorValue, 0, 1023, 0, 180);
-    servo1.write(mappedAngle);
+  // // Map analog value (0–1023) from A0 to 0–180 servo angle
+  // {
+  //   int sensorValue = analogRead(A0);
+  //   int mappedAngle = map(sensorValue, 0, 1023, 0, 180);
+  //   servo1.write(mappedAngle);
 
-    Serial.print("[Servo 1] Analog reading: ");
-    Serial.print(sensorValue);
-    Serial.print(" => Mapped angle: ");
-    Serial.println(mappedAngle);
-  }
+  //   Serial.print("[Servo 1] Analog reading: ");
+  //   Serial.print(sensorValue);
+  //   Serial.print(" => Mapped angle: ");
+  //   Serial.println(mappedAngle);
+  // }
 
   // Pause before testing next servo
-  delay(10000);
+  delay(1000);
 
   // -------------------------------
   // TEST SERVO 2
   // -------------------------------
   Serial.println("Testing Servo 2...");
 
-  // Full sweep from 0° up to 270°
-  for(int angle = 0; angle <= 270; angle++) {
+  // Full sweep from 0° up to 270° (adjust if your servo only supports 180°)
+  for(int angle = 0; angle <= 270; angle+=30) {
     servo2.write(angle);
-    delay(20);
+    
+    delay(500);
   }
 
   // Full sweep from 270° down to 0°
-  for(int angle = 270; angle >= 0; angle--) {
+  for(int angle = 270; angle >= 0; angle-=30) {
     servo2.write(angle);
-    delay(20);
+    delay(500);
   }
+  // // Map analog value (0–1023) from A0 to 0–180 servo angle
+  // {
+  //   int sensorValue = analogRead(A0);
+  //   int mappedAngle = map(sensorValue, 0, 1023, 0, 180);
+  //   servo2.write(mappedAngle);
 
-  // Map analog value (0–1023) from A0 to 0–180 servo angle
-  {
-    int sensorValue = analogRead(A0);
-    int mappedAngle = map(sensorValue, 0, 1023, 0, 180);
-    servo2.write(mappedAngle);
-
-    Serial.print("[Servo 2] Analog reading: ");
-    Serial.print(sensorValue);
-    Serial.print(" => Mapped angle: ");
-    Serial.println(mappedAngle);
-  }
+  //   Serial.print("[Servo 2] Analog reading: ");
+  //   Serial.print(sensorValue);
+  //   Serial.print(" => Mapped angle: ");
+  //   Serial.println(mappedAngle);
+  // }
 
   // Pause before testing next servo
-  delay(10000);
-
+  delay(1000);
+}
   // -------------------------------
   // TEST SERVO 3
   // -------------------------------
-  Serial.println("Testing Servo 3...");
+  // Serial.println("Testing Servo 3...");
 
-  // Full sweep from 0° up to 270°
-  for(int angle = 0; angle <= 270; angle++) {
-    servo3.write(angle);
-    delay(20);
-  }
+  // // Full sweep from 0° up to 270°
+  // for(int angle = 0; angle <= 270; angle++) {
+  //   servo3.write(angle);
+  //   delay(20);
+  // }
 
-  // Full sweep from 270° down to 0°
-  for(int angle = 270; angle >= 0; angle--) {
-    servo3.write(angle);
-    delay(20);
-  }
+//   // Full sweep from 270° down to 0°
+//   for(int angle = 270; angle >= 0; angle--) {
+//     servo3.write(angle);
+//     delay(20);
+//   }
 
-  // Map analog value (0–1023) from A0 to 0–180 servo angle
-  {
-    int sensorValue = analogRead(A0);
-    int mappedAngle = map(sensorValue, 0, 1023, 0, 180);
-    servo3.write(mappedAngle);
+//   // Map analog value (0–1023) from A0 to 0–180 servo angle
+//   {
+//     int sensorValue = analogRead(A0);
+//     int mappedAngle = map(sensorValue, 0, 1023, 0, 180);
+//     servo3.write(mappedAngle);
 
-    Serial.print("[Servo 3] Analog reading: ");
-    Serial.print(sensorValue);
-    Serial.print(" => Mapped angle: ");
-    Serial.println(mappedAngle);
-  }
+//     Serial.print("[Servo 3] Analog reading: ");
+//     Serial.print(sensorValue);
+//     Serial.print(" => Mapped angle: ");
+//     Serial.println(mappedAngle);
+//   }
 
-  // Final delay before repeating everything
-  delay(10000);
-}
+//   // Final delay before repeating everything
+//   delay(10000);
+// }

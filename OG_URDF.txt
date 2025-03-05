@@ -35,9 +35,12 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
-        <box size="0.2 0.2 0.2" />
+        <mesh
+          filename="package://Phase 2 ALL LINKS/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -71,6 +74,15 @@
           rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Phase 2 ALL LINKS/meshes/Link 1 -  Purple.STL" />
+      </geometry>
+    </collision>
   </link>
   <joint
     name="J1"
@@ -121,9 +133,12 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.5151E-05 0.07 2.5215E-08" rpy="0 0 0" />
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
-        <box size="0.1 0.20 0.1" />
+        <mesh
+          filename="package://Phase 2 ALL LINKS/meshes/Link 2 - Orange .STL" />
       </geometry>
     </collision>
   </link>
@@ -175,10 +190,13 @@
           rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-     <collision>
-      <origin xyz="0 0.16 0" rpy="1.5708 0 0" />
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
-        <cylinder radius="0.05" length="0.2" />
+        <mesh
+          filename="package://Phase 2 ALL LINKS/meshes/Link 3 - Pink .STL" />
       </geometry>
     </collision>
   </link>
@@ -232,10 +250,11 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 -0.0275"
+        xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <cylinder radius="0.06" length="0.075" />
+        <mesh
+          filename="package://Phase 2 ALL LINKS/meshes/Link 4 - Green.STL" />
       </geometry>
     </collision>
   </link>
@@ -287,6 +306,15 @@
           rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Phase 2 ALL LINKS/meshes/Link 5 - Yellow .STL" />
+      </geometry>
+    </collision>
   </link>
   <joint
     name="J5"
@@ -338,10 +366,11 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0.165"
-        rpy="0 0 -1.5708" />
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
-        <box size="0.1 0.275 0.25" />
+        <mesh
+          filename="package://Phase 2 ALL LINKS/meshes/Link 6 - Magenta.STL" />
       </geometry>
     </collision>
   </link>

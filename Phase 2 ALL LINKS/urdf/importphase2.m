@@ -1,6 +1,6 @@
 %% BASIC STATIC ROBOT 
 % Load the robot
-robot = importrobot('C:\Users\User\OneDrive - University of Toronto\Capstone-CODE\Phase 2 ALL LINKS\urdf\Phase 2 ALL LINKS.urdf');
+robot = importrobot('C:\Users\User\Desktop\Capstone-Code\Phase 2 ALL LINKS\urdf\Phase 2 ALL LINKS.urdf');
 
 % Show robot model
 % show(robot);
@@ -20,14 +20,14 @@ q0 = homeConfiguration(robot);
 jointIdx = find(strcmp({q0.JointName}, firstJointName));
 
 % Rotate the joint by 45 degrees
-q0(jointIdx).JointPosition = pi/4;
+q0(jointIdx).JointPosition = 0;
 
 show(robot, q0)
 
 %% Manual JOINT CHECK 
 
 % Load the robot
-robot = importrobot('C:\Users\User\OneDrive - University of Toronto\Capstone-CODE\Phase 2 ALL LINKS\urdf\Phase 2 ALL LINKS.urdf');
+robot = importrobot('C:\Users\User\Desktop\Capstone-Code\Phase 2 ALL LINKS\urdf\Phase 2 ALL LINKS.urdf');
 
 % Show robot model
 % show(robot);
@@ -71,7 +71,7 @@ else
 end
 
 % Load the robot
-robot = importrobot('C:\Users\User\OneDrive - University of Toronto\Capstone-CODE\Phase 2 ALL LINKS\urdf\Phase 2 ALL LINKS.urdf');
+robot = importrobot('C:\Users\User\Desktop\Capstone-Code\Phase 2 ALL LINKS\urdf\Phase 2 ALL LINKS.urdf');
 
 % Show robot model in the existing figure
 ax = show(robot); 

@@ -22,15 +22,4 @@ void loop() {
     delay(20);
   }
 
-  //mapping an analog value to servo angle (from a potentiometer on A0)
-  int sensorValue = analogRead(A0); //reads the voltage value on pin A0
-  int mappedAngle = map(sensorValue, 0, 1023, 0, 180); //maps that voltage to an angle
-  myServo.write(mappedAngle);
-
-  Serial.print("Analog reading: ");
-  Serial.print(sensorValue);
-  Serial.print(" => Mapped angle: ");
-  Serial.println(mappedAngle);
-
-  delay(10000); // 10 second before repeating the process
 }
