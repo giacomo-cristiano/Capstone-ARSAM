@@ -1,0 +1,14 @@
+eePosition = [0.1 0.1 0.1];
+eePose = trvec2tform(eePosition);  % 4x4 pose
+
+% Example input settings
+enforceJointLimits = false;
+sortByDistance = true;
+referenceConfig = homeConfiguration(robot);  % or any reference joint pose
+
+ikConfig = spray_tip(eePose); % Uses the generated file
+
+show(robot,ikConfig(1,:));
+hold on
+plotTransforms(eePosition,tform2quat(eePose))
+hold off

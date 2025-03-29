@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF_ROBOT_ARM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.3158E-07 -0.0066564 0.035"
+        rpy="0 0 0" />
+      <mass
+        value="1.3468" />
+      <inertia
+        ixx="0.001167"
+        ixy="1.0458E-11"
+        ixz="-1.3577E-14"
+        iyy="0.001545"
+        iyz="-3.1447E-14"
+        izz="0.0023418" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link 1 -  Purple">
+    <inertial>
+      <origin
+        xyz="0.000462671361281153 2.97113903443417E-08 0.0735369702589573"
+        rpy="0 0 0" />
+      <mass
+        value="0.326977300934987" />
+      <inertia
+        ixx="0.000122131599820774"
+        ixy="-1.53922064656832E-11"
+        ixz="4.86868759540702E-09"
+        iyy="0.000134232410593554"
+        iyz="-6.63840686362582E-11"
+        izz="0.000116370999393103" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 1 -  Purple.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 1 -  Purple.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link 1 -  Purple" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="Link 2 - Orange ">
+    <inertial>
+      <origin
+        xyz="1.47413225523596E-05 0.11720401679421 2.52962884387309E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.523409325877751" />
+      <inertia
+        ixx="0.000974484270929211"
+        ixy="-8.37566402062504E-09"
+        ixz="-3.10160943711967E-11"
+        iyy="0.000101160481967352"
+        iyz="3.77688071036049E-11"
+        izz="0.00100340632009345" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 2 - Orange .STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 2 - Orange .STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="revolute">
+    <origin
+      xyz="0.00137767899664845 0 0.132999999999991"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="Link 1 -  Purple" />
+    <child
+      link="Link 2 - Orange " />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="Link 3 - Pink ">
+    <inertial>
+      <origin
+        xyz="5.57420221092286E-10 0.0969565911680367 9.66062823831185E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.387509421172533" />
+      <inertia
+        ixx="0.000934919014251265"
+        ixy="-7.24932450655251E-10"
+        ixz="1.24818603260314E-13"
+        iyy="7.59283381556646E-05"
+        iyz="2.46976422228448E-12"
+        izz="0.000943393660393925" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 3 - Pink .STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 3 - Pink .STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="revolute">
+    <origin
+      xyz="0.000142386346877809 0.260037857840369 0"
+      rpy="0 0 -1.57079632679489" />
+    <parent
+      link="Link 2 - Orange " />
+    <child
+      link="Link 3 - Pink " />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link 4 - Green">
+    <inertial>
+      <origin
+        xyz="0.00321280028173598 -0.000975434404262021 -0.0684119916902999"
+        rpy="0 0 0" />
+      <mass
+        value="0.861410776239797" />
+      <inertia
+        ixx="0.000529580860538517"
+        ixy="-4.34195106658219E-07"
+        ixz="-7.76136044776842E-07"
+        iyy="0.000534777465140237"
+        iyz="3.27540024050543E-06"
+        izz="0.000909169298436319" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 4 - Green.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 4 - Green.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="revolute">
+    <origin
+      xyz="-0.0102500000000031 0.343074999999996 0"
+      rpy="-1.57079632679489 0 0" />
+    <parent
+      link="Link 3 - Pink " />
+    <child
+      link="Link 4 - Green" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link 5 - Yellow ">
+    <inertial>
+      <origin
+        xyz="0.00820226428464959 0.00222235520078462 0.00245206667353493"
+        rpy="0 0 0" />
+      <mass
+        value="0.0844764228819908" />
+      <inertia
+        ixx="8.41451588534578E-06"
+        ixy="3.02785913569913E-08"
+        ixz="-2.03021568777724E-08"
+        iyy="1.77114033540202E-05"
+        iyz="5.29455683515509E-08"
+        izz="2.01421651870411E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 5 - Yellow .STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 5 - Yellow .STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5707963267949 0.0122210014689393 -1.57079632679489" />
+    <parent
+      link="Link 4 - Green" />
+    <child
+      link="Link 5 - Yellow " />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link 6 - Magenta">
+    <inertial>
+      <origin
+        xyz="0.033389 0.001235 0.084802"
+        rpy="0 0 0" />
+      <mass
+        value="1.019" />
+      <inertia
+        ixx="0.00030271"
+        ixy="9.4025E-07"
+        ixz="7.2515E-05"
+        iyy="0.0005829"
+        iyz="3.8899E-07"
+        izz="0.00054766" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 6 - Magenta.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_ROBOT_ARM/meshes/Link 6 - Magenta.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 1.5708 0" />
+    <parent
+      link="Link 5 - Yellow " />
+    <child
+      link="Link 6 - Magenta" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link name="spray_tip"/> 
+  <joint name="nozzle_offset" type="fixed">
+  <origin xyz="0 0 0.142" rpy="0 0 0"/>
+    <parent link = "Link 6 - Magenta"/>
+    <child link="spray_tip"/>
+    <origin xyz="0 0 0.142" rpy="0 0 0"/>
+  </joint>
+</robot>

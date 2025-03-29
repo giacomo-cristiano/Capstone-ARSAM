@@ -119,8 +119,6 @@ end
 %Forward kinematics through SIMSCAPE, this is your task. how to get unity
 %to work with simscape
 smimport('C:\Users\User\Desktop\Capstone-Code\Phase 2 ALL LINKS\urdf\Phase 2 ALL LINKS.urdf')
-
-
 %% Import STL File
 stlPath = 'C:\Users\joshu\Downloads\Capstone-CODE-main\naca 0015.stl'; % Define file path
 fv = stlread(stlPath); % Read STL file

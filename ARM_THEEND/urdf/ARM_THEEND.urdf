@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ARM_THEEND">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.3158E-07 -0.0066564 0.035"
+        rpy="0 0 0" />
+      <mass
+        value="1.3468" />
+      <inertia
+        ixx="0.001167"
+        ixy="1.0458E-11"
+        ixz="-1.3577E-14"
+        iyy="0.001545"
+        iyz="-3.1447E-14"
+        izz="0.0023418" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link 1 -  Purple">
+    <inertial>
+      <origin
+        xyz="0.00046267 2.9711E-08 0.073537"
+        rpy="0 0 0" />
+      <mass
+        value="0.32698" />
+      <inertia
+        ixx="0.00012213"
+        ixy="-1.5392E-11"
+        ixz="4.8687E-09"
+        iyy="0.00013423"
+        iyz="-6.6384E-11"
+        izz="0.00011637" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 1 -  Purple.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 1 -  Purple.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link 1 -  Purple" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="Link 2 - Orange ">
+    <inertial>
+      <origin
+        xyz="1.4741E-05 0.1172 2.5296E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.52341" />
+      <inertia
+        ixx="0.00097448"
+        ixy="-8.3757E-09"
+        ixz="-3.1016E-11"
+        iyy="0.00010116"
+        iyz="3.7769E-11"
+        izz="0.0010034" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 2 - Orange .STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 2 - Orange .STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="revolute">
+    <origin
+      xyz="0.0013777 0 0.133"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Link 1 -  Purple" />
+    <child
+      link="Link 2 - Orange " />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="Link 3 - Pink ">
+    <inertial>
+      <origin
+        xyz="5.5742E-10 0.096957 9.6606E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.38751" />
+      <inertia
+        ixx="0.00093492"
+        ixy="-7.2493E-10"
+        ixz="1.2482E-13"
+        iyy="7.5928E-05"
+        iyz="2.4698E-12"
+        izz="0.00094339" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 3 - Pink .STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 3 - Pink .STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="revolute">
+    <origin
+      xyz="0.00014239 0.26004 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="Link 2 - Orange " />
+    <child
+      link="Link 3 - Pink " />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="Link 4 - Green">
+    <inertial>
+      <origin
+        xyz="0.0032128 -0.00097543 -0.068412"
+        rpy="0 0 0" />
+      <mass
+        value="0.86141" />
+      <inertia
+        ixx="0.00052958"
+        ixy="-4.342E-07"
+        ixz="-7.7614E-07"
+        iyy="0.00053478"
+        iyz="3.2754E-06"
+        izz="0.00090917" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 4 - Green.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 4 - Green.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="revolute">
+    <origin
+      xyz="-0.01025 0.34307 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Link 3 - Pink " />
+    <child
+      link="Link 4 - Green" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="Link 5 - Yellow ">
+    <inertial>
+      <origin
+        xyz="0.0082023 0.0022224 0.0024521"
+        rpy="0 0 0" />
+      <mass
+        value="0.084476" />
+      <inertia
+        ixx="8.4145E-06"
+        ixy="3.0279E-08"
+        ixz="-2.0302E-08"
+        iyy="1.7711E-05"
+        iyz="5.2946E-08"
+        izz="2.0142E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 5 - Yellow .STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 5 - Yellow .STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0.017993 -1.5708" />
+    <parent
+      link="Link 4 - Green" />
+    <child
+      link="Link 5 - Yellow " />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="Link 6 - Magenta">
+    <inertial>
+      <origin
+        xyz="0.033389 0.001235 0.084802"
+        rpy="0 0 0" />
+      <mass
+        value="1.019" />
+      <inertia
+        ixx="0.00030271"
+        ixy="9.4028E-07"
+        ixz="7.2515E-05"
+        iyy="0.0005829"
+        iyz="3.8899E-07"
+        izz="0.00054766" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 6 - Magenta.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ARM_THEEND/meshes/Link 6 - Magenta.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="Link 5 - Yellow " />
+    <child
+      link="Link 6 - Magenta" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="3.14"
+      upper="-3.14"
+      effort="10"
+      velocity="100" />
+  </joint>
+</robot>
