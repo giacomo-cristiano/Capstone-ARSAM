@@ -1,15 +1,27 @@
+% % Define sweep grid
+% x_vals = linspace(0.2, 0.6,50);   % forward range
+% y_vals = linspace(-0.3, 1,50);  % lateral range
+% z_vals = linspace(0.1, 0.6, 50);   % vertical range
+% 
+% % Setup
+% enforceJointLimits = true;
+% sortByDistance = true;
+% referenceConfigstruct = homeConfiguration(robot); % sets 0 0 0 0 0 0 joint angles 
+% referenceConfig = [referenceConfigstruct.JointPosition]; % convert to numeric row vector
+
+robot.DataFormat = 'row';  % ✔️ Recommended for sweep tests with numeric configs
+
 % Define sweep grid
 x_vals = linspace(0.2, 0.6,50);   % forward range
-y_vals = linspace(-0.3, 1,50);  % lateral range
-z_vals = linspace(0.1, 0.6, 50);   % vertical range
+y_vals = linspace(-0.3, 1,50);    % lateral range
+z_vals = linspace(0.1, 0.6, 50);  % vertical range
 
 % Setup
 enforceJointLimits = true;
 sortByDistance = true;
-referenceConfigstruct = homeConfiguration(robot); % sets 0 0 0 0 0 0 joint angles 
-referenceConfig = [referenceConfigstruct.JointPosition]; % convert to numeric row vector
+referenceConfig = homeConfiguration(robot);  % Already a numeric row vector
 
-ikSol = spray_tip(T, enforceJointLimits, sortByDistance, referenceConfig);
+% ikSol = spray_tip(T, enforceJointLimits, sortByDistance, referenceConfig);
 
 reachable_points = [];  % for plotting
 unreachable_points = [];  % for debugging

@@ -2,25 +2,13 @@ function qOpts = spray_tip(eeTform, enforceJointLimits, sortByDistance, referenc
 %spray_tip Function for generating closed-form inverse kinematics solutions to the DH robot given by the parameters specified below
 %   $Revision: $ $Date: $
 %
-%   Generated on 31-Mar-2025 02:42:27
+%   Generated on 31-Mar-2025 02:29:02
 
 
 dhParams = [0.00137767899664845 -1.57079632679489 0.132999999999991 0;0.260037896822905 0 1.97215226305253e-31 0;-0.0102500000000031 -1.57079632679489 2.3063458700705e-15 0;0 1.5707963267949 -0.343074999999996 0;0 1.5707963267814 0 0;0 3.14159265358979 -0.142 0];
 thetaOffsets = [0 -1.57024876678256 3.14104509357745 1.57079632679489 -3.12937532532596 1.57079265358979];
 lastThreeAxesSign = [1 -1 -1];
-% jointLimits = [-3.14 3.14;-3.14 3.14;0 0;0 0;0 0;0 0];
-jointLimits = [ ...
-    deg2rad(-67.5), deg2rad(67.5);   % J1
-    deg2rad(0),     deg2rad(45);     % J2
-    deg2rad(-30),   deg2rad(45);     % J3
-    % deg2rad(-45),   deg2rad(45);     % J4
-    deg2rad(-135),   deg2rad(135);     % J4 
-    % deg2rad(-45),   deg2rad(45)      % J5 
-    deg2rad(-90),   deg2rad(90);     % J5 
-    % deg2rad(-360),   deg2rad(360);     % J6
-    deg2rad(-135),   deg2rad(135)      % J6
-];
-
+jointLimits = [-3.14 3.14;-3.14 3.14;0 0;0 0;0 0;0 0];
 isJointRevolute = ([true true true true true true]);
 
 % Compute the shifted joint limits, which are the limits during solution, where theta offsets are not yet in play
